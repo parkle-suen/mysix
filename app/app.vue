@@ -26,7 +26,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp>
+  <UApp locale="zhCN">
     <UHeader>
       <template #left>
         <NuxtLink to="/">

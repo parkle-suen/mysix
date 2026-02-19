@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui'
+
   ],
   ssr: true,
 
@@ -12,7 +13,6 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
-
   routeRules: {
     '/': { prerender: true }
   },
