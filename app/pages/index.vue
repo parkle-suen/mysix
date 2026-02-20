@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AppSlider />
     <UPageHero
       title="Nuxt Starter Template"
       description="A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours."
@@ -74,3 +75,13 @@
     </UPageSection>
   </div>
 </template>
+
+<script setup>
+// 设置页面标题和SEO信息
+useHead({
+  title: '首页 - Lotto',
+  meta: [
+    { name: 'description', content: 'Lotto - 首页' }
+  ]
+})
+</script>
