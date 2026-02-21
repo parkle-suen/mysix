@@ -75,6 +75,7 @@ const sliders = ref<SliderItem[]>([])
 const fetchSliders = async () => {
   try {
     sliders.value = await $fetch('/api/sliders')
+    console.log('成功load sliders:', sliders.value)
   } catch (error) {
     console.error('Failed to fetch sliders:', error)
     sliders.value = []

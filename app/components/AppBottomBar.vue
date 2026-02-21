@@ -11,22 +11,15 @@
       >
         <NuxtLink
           :to="item.path"
-          class="h-12 w-full flex flex-col items-center justify-center gap-0.5 text-xs text-[--ui-text-muted] hover:text-[--ui-primary] transition-colors"
-          :aria-current="route.path === item.path ? 'page' : undefined"
+          class="h-12 w-full flex flex-col items-center justify-center gap-0.5 text-xs transition-all active:scale-95"
+          active-class="text-[--ui-primary]"
+          :exact="item.path === '/'"
         >
           <UIcon
             :name="item.icon"
-            :class="[
-              'w-5 h-5',
-              route.path === item.path ? 'text-[--ui-primary]' : ''
-            ]"
+            class="w-5 h-5 transition-colors"
           />
-          <span
-            :class="[
-              'font-medium',
-              route.path === item.path ? 'text-[--ui-primary]' : ''
-            ]"
-          >{{ item.label }}</span>
+          <span class="font-medium">{{ item.label }}</span>
         </NuxtLink>
       </li>
     </ul>
@@ -34,7 +27,6 @@
 </template>
 
 <script setup>
-const route = useRoute()
 const navItems = [
   { label: '首页', path: '/', icon: 'i-lucide-home' },
   { label: '排行', path: '/rank', icon: 'i-lucide-trophy' },
@@ -43,6 +35,3 @@ const navItems = [
   { label: '我的', path: '/profile', icon: 'i-lucide-user' }
 ]
 </script>
-
-<style scoped>
-</style>
