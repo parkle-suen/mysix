@@ -35,3 +35,20 @@ const navItems = [
   { label: '我的', path: '/profile', icon: 'i-lucide-user' }
 ]
 </script>
+
+<style>
+/* 全局隐藏滚动条 */
+body {
+  overflow: auto;
+}
+
+/* 隐藏Webkit浏览器的滚动条 */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox隐藏滚动条 */
+html {
+  scrollbar-width: none;
+}
+</style>
