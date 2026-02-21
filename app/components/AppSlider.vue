@@ -57,9 +57,6 @@
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 interface SliderItem {
   id: number | string
@@ -97,11 +94,14 @@ onMounted(async () => {
 })
 </script>
 
-<style scoped>
+<style>
+/* 全局导入Swiper的CSS，确保能应用到动态生成的DOM */
 @import 'swiper/css';
 @import 'swiper/css/pagination';
 @import 'swiper/css/navigation';
+</style>
 
+<style scoped>
 .swiper {
   padding-bottom: calc(env(safe-area-inset-bottom) + 2rem);
 }
