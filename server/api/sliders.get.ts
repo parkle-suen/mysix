@@ -9,9 +9,6 @@ export default defineEventHandler(async (/* event */) => {
       ORDER BY order_id ASC
     `)
 
-    // 添加调试日志
-    console.log('Fetched sliders from database:', sliders)
-
     // 直接返回数组
     return sliders
   } catch (error) {

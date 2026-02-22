@@ -15,6 +15,8 @@
     "@iconify-json/simple-icons": "^1.2.70",
     "@libsql/client": "^0.17.0",
     "@tma.js/sdk-vue": "^1.0.16",
+    "better-auth": "^1.4.18",
+    "better-auth-telegram": "^0.4.0",
     "nuxt": "^4.3.1",
     "nuxt-swiper": "^2.0.1"
   },

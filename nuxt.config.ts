@@ -15,7 +15,12 @@ export default defineNuxtConfig({
     turso: {
       databaseUrl: '',
       authToken: ''
+    },
+    telegram: {
+      botToken: '',
+      chatId: ''
     }
+
   },
   routeRules: {
     '/': { prerender: true }
